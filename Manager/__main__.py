@@ -1,4 +1,49 @@
-# All codes are from SaitamaRobot
+# Tutti i codici provengono da SaitamaRobot
+# Tutti i crediti vanno a https://github.com/AnimeKaizoku/SaitamaRobot
+
+import  importlib
+import  re
+dalla  digitazione di  importazione  Opzionale , Elenco
+
+dal  telegramma di  importazione  Bot , aggiornamento , ParseMode , InlineKeyboardMarkup , InlineKeyboardButton
+da  telegramma . importazione errori  Unauthorized , BadRequest , TimedOut , NetworkError , ChatMigrated , TelegramError 
+da  telegramma . importazione ext  CommandHandler , MessageHandler , CallbackQueryHandler , Filters 
+da  telegramma . ext . importazione del dispatcher  run_async , DispatcherHandlerStop 
+da  telegramma . utils . aiutanti  importano  escape_markdown
+
+da  Manager  import  dispatcher , updater , TOKEN , WEBHOOK , OWNER_ID , SUPPORT_CHAT , DONATION_LINK , CERT_PATH , PORT , URL , LOGGER , \
+    ALLOW_EXCL
+# necessario per caricare dinamicamente i moduli
+# NOTA: l'ordine dei moduli non è garantito, specificalo nel file di configurazione!
+da  Manager . i moduli  importano  ALL_MODULES
+da  Manager . moduli . helper_funcs . chat_status  import  is_user_admin
+da  Manager . moduli . helper_funcs . misc  import  paginate_modules
+
+PM_START_TEXT  =  "" "
+Ciao il mio nome è {}!
+Sai quanto a volte è difficile gestire il gruppo, quindi ecco la soluzione per te.
+Il mio proprietario è [DarkLuke] (t.me/DarkLukeclapyou)
+Fai clic su /help 
+"" "
+
+HELP_STRINGS  =  "" "
+Ehilà! Il mio nome è *{}*.
+Bot per la gestione dei gruppi con funzionalità avanzate. 
+* Principali * comandi disponibili:
+ - / start: avvia il bot
+ - / help: PM sei tu questo messaggio.
+ - / help <nome modulo>: le informazioni del PM su quel modulo.
+ - / donate: informazioni su come donare!
+ - /impostazioni:
+   - in PM: ti invierà le impostazioni per tutti i moduli supportati.
+   - in un gruppo: ti reindirizzerà a pm, con tutte le impostazioni della chat.
+ 
+Si prega di notare che questo repository è basato su Saitama Bot e GroupManager Bot.
+{}
+E il seguente:
+"" " . format ( dispatcher . bot . first_name , " "  if  not  ALLOW_EXCL  else  " \ n Tutti i comandi possono essere usati con / o!. \ n " )
+DONATE_STRING   =   ""  "Heylá, sono felice di sapere che vuoi fare una donazione! Non accetto alcuna donazione in questo momento, ma, se necessario, ringrazia @DarkLukeclapyou."  ""
+ i  codici  provengono  da  SaitamaRobot
 # All credits go to https://github.com/AnimeKaizoku/SaitamaRobot
 
 import importlib
